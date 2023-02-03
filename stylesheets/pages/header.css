@@ -1,1 +1,317 @@
-/* 헤더 */
+.a11y-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0, 0, 0, 0);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.login-bar {
+    width: 100%;
+    background-color: var(--color-gray-100);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.login-bar-item:nth-of-type(1) {
+    margin-left: 74.4rem;
+}
+
+.login-bar-item:nth-of-type(4),
+.login-bar-item:nth-of-type(5) {
+    order: -1;
+}
+
+.login-bar-item {
+    font-size: 1.2rem;
+    height: 3.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.login-bar-item + .login-bar-item {
+    margin-left: .8rem;
+}
+
+.header-main {
+    width: 102rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 11rem 4rem 17.6rem 3rem 51.6rem 3.3rem 1.5rem 4.5rem 1rem 4.5rem;
+    grid-template-rows: 3.4rem 4rem 1rem 2.6rem;
+}
+
+.button--category {
+    grid-area: 1 / 1 / 5 / 2;
+    background-color: var(--color-blue-600);
+    color: var(--color-white);
+    border: none;
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-image: url("/assets/icon/hamburger.svg");
+    background-size: 3rem 3rem;
+    background-repeat: no-repeat;
+    background-position: top 3rem left 4rem;
+}
+
+.button--category p {
+    margin: 0;
+    margin-top: 7.2rem;
+}
+
+.header-logo {
+    grid-area: 2 / 3 / 3 / 4;
+    margin: 0;
+    background-image: url("/assets/logo/logo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header-search {
+    grid-area: 2 / 5 / 3 / 6;
+    font-size: 1.2rem;
+    border: 1px solid var(--color-blue-600);
+    display: flex;
+}
+
+.select-wrapper {    
+    display: flex;
+    position: relative;
+}
+
+.search-category {
+    width: 13.5rem;
+    padding-left: 1.2rem;
+    color: var(--color-gray-700);
+    border: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.search-category:focus,
+.search-category:focus-within,
+.search-category:active {
+    outline: none;
+}
+
+.select-wrapper svg {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.search-input {
+    width: 30.1rem;
+    border: none;
+    border-left: 1px solid var(--color-gray-100);
+    padding-left: 1rem;
+}
+
+.search-input:focus,
+.search-input:focus-within,
+.search-input:active {
+    outline: none;
+}
+
+.search-button {
+    width: 4rem;
+    height: 4rem;
+    background-position: center;
+}
+
+.button--mic {
+    background-image: url("/assets/icon/mic.svg");
+}
+
+.button--search {
+    background-image: url("/assets/icon/search.svg");
+}
+
+.header-button {
+    height: 6rem;
+    margin-top: 2.9rem;
+    padding: 0;
+    padding-top: 4rem;
+    font-size: 1.2rem;
+
+    background-repeat: no-repeat;
+    background-size: 4rem 4rem;
+    background-position: top;
+}
+
+.myCoupang {
+    grid-area: 1 / 8 / 5 / 9;
+}
+
+.button--myCoupang {
+    background-image: url("/assets/icon/my-coupang.svg");
+}
+
+.myCoupang-list {
+    width: 9rem;
+    height: 12.95rem;
+    list-style: none;
+    margin: 0;
+    margin-top: 1.1rem;
+    padding: 2.4rem 0;
+    font-size: 1.2rem;
+    border: 1px solid var(--color-gray-500);
+
+    position: relative;
+    transform: translateX(-25%);
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.myCoupang-list::before,
+.myCoupang-list::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 .45rem .75rem .45rem;
+    border-color: var(--color-white) transparent;
+    border-style: solid;
+    width: 0;
+    z-index: 10;
+}
+
+.myCoupang-list::after {
+    top: -.85rem;    
+    border-width: 0 .5rem .85rem .5rem;
+    border-color: var(--color-gray-500) transparent;
+    z-index: 9;
+}
+
+.myCoupang-list-item {
+    text-align: center;
+}
+
+.myCoupang-list-item +
+.myCoupang-list-item {
+    margin-top: 2rem;
+}
+
+.cart {
+    grid-area: 1 / 10 / 5 / 11;
+}
+
+.button--cart {
+    position: relative;
+    background-image: url("/assets/icon/cart.svg");
+}
+
+.button--cart::after {
+    content: '0';    
+    width: 1.8rem;
+    height: 1.8rem;
+    display: inline-block;
+    line-height: normal;
+    position: absolute;
+    color: var(--color-white);
+    background-color: var(--color-blue-600);
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+}
+
+.cart-message {
+    font-size: 1.4rem;
+    width: 28.8rem;
+    height: 9.2rem;
+    margin: 0;
+    margin-top: 1.1rem;
+    border: 1px solid var(--color-gray-500);
+    position: relative;
+    transform: translateX(-86%);
+    
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
+}
+
+.cart-message::before,
+.cart-message::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -.7rem;
+    right: 1.5rem;
+    border-width: 0 .45rem .75rem .45rem;
+    border-color: var(--color-white) transparent;
+    border-style: solid;
+    width: 0;
+    z-index: 10;
+}
+
+.cart-message::after {
+    top: -.85rem;    
+    right: 1.4rem;
+    border-width: 0 .5rem .85rem .5rem;
+    border-color: var(--color-gray-500) transparent;
+    z-index: 9;
+}
+
+.myCoupang-list,
+.cart-message {
+    display: none;
+}
+
+.is--active .myCoupang-list,
+.cart--empty .cart-message{
+    display: flex;
+}
+
+.type-nav {
+    grid-area: 4 / 3 / 5 / 7;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.type-nav-item {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.type-nav a {
+    font-size: 1.2rem;
+}
+
+.type-nav-item a img {
+    display: inline-block;
+    margin-bottom: .2rem;
+    margin-right: .4rem;
+}
+
+.type-nav-item a span + img {
+    margin-right: 0;
+    margin-left: .4rem;
+}
